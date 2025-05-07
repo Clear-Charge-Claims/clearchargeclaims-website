@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start a Claim | Clear Charge Claims</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <img src="images/logo.png" alt="Clear Charge Claims Logo" class="logo">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="start-claim.html">Start a Claim</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="claim-form">
+    <div class="container">
+      <h1>Start Your Claim</h1>
+      <p>Please complete the form below and we'll be in touch to assess your claim.</p>
+      <form action="mailto:enquiries@clearchargeclaims.com" method="POST" enctype="text/plain">
+        <label for="name">Business Name:</label>
+        <input type="text" id="name" name="Business Name" required><br>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="Email" required><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="Phone" required><br>
+
+        <label for="message">Message or Additional Info:</label><br>
+        <textarea id="message" name="Message" rows="5"></textarea><br>
+
+        <input type="submit" value="Submit Claim">
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Clear Charge Claims Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
