@@ -2,52 +2,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Start a Claim - Clear Charge Claims</title>
-    <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Clear Charge Claims</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header class="site-header">
-        <div class="logo-section">
-            <img src="logo.png" alt="Clear Charge Claims Logo" class="logo"/>
-            <span class="tagline">Helping You Reclaim What's Yours</span>
-        </div>
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="contact.html" class="active">Start a Claim</a>
-            <a href="about.html">About Us</a>
-            <a href="faq.html">FAQ</a>
-        </nav>
-    </header>
+  <header class="header">
+    <div class="logo">
+      <img src="images/Clear_Charge_Claims_Logo.png" alt="Clear Charge Claims Logo">
+      <h1>Clear Charge Claims</h1>
+    </div>
+  </header>
 
-    <main class="content contact">
-        <h1>Start Your Claim</h1>
-        <p>If you believe your business has overpaid due to hidden energy broker commissions, fill in the form below and one of our specialists will get in touch.</p>
+  <main class="contact-container">
+    <section class="contact-intro">
+      <h2>Get in Touch with Clear Charge Claims</h2>
+      <p>We're here to help you recover hidden broker fees from your business energy contract — no win, no fee.</p>
+    </section>
 
-        <form action="mailto:enquiries@clearchargeclaims.com" method="post" enctype="text/plain" class="claim-form">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required />
+    <section class="contact-form-section">
+      <form class="contact-form" action="#" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="John Smith" required>
 
-            <label for="company">Company Name:</label>
-            <input type="text" id="company" name="company" required />
+        <label for="business">Business Name:</label>
+        <input type="text" id="business" name="business" placeholder="Smith & Co. Ltd" required>
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required />
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="john@smithco.co.uk" required>
 
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required />
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="07300 200 644" required>
 
-            <label for="message">Brief Description of Your Situation:</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" placeholder="Tell us about your energy contract or ask a question..." rows="5" required></textarea>
 
-            <button type="submit">Submit Claim</button>
-        </form>
-    </main>
+        <button type="submit">Submit Claim Enquiry</button>
+      </form>
 
-    <footer>
-        <p>&copy; 2025 Clear Charge Claims Ltd. All rights reserved.</p>
-    </footer>
+      <aside class="contact-info">
+        <h3>Contact Details</h3>
+        <p><strong>Email:</strong> <a href="mailto:enquiries@clearchargeclaims.com">enquiries@clearchargeclaims.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+447300200644">07300 200 644</a></p>
+        <p><strong>Hours:</strong> Monday–Friday, 9am–5pm</p>
+      </aside>
+    </section>
+
+    <section class="trust-reasons">
+      <h3>Why Choose Us?</h3>
+      <ul>
+        <li>🔒 100% Confidential</li>
+        <li>✅ No Win, No Fee</li>
+        <li>⚖️ Work with FCA-Regulated Legal Partners</li>
+      </ul>
+    </section>
+
+    <section class="testimonial">
+      <blockquote>
+        “Clear Charge Claims made the process simple and transparent. We recovered £8,000 in hidden fees.”
+      </blockquote>
+      <p class="client-name">— Sarah T., Retail Business Owner</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Clear Charge Claims. All rights reserved.</p>
+  </footer>
 </body>
 </html>
