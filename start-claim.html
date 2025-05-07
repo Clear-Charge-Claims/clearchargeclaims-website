@@ -4,64 +4,158 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Start a Claim | Clear Charge Claims</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <title>Start a Claim | ClearCharge Claims</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #44c145 5%, #ffffff 90%, #002b5c 5%);
+    }
+
+    .navbar {
+      background-color: #002b5c;
+      display: flex;
+      justify-content: center;
+      padding: 1em 0;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .form-section {
+      background-color: #f1f7fb;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-section h2 {
+      color: #002b5c;
+      text-align: center;
+    }
+
+    .form-section p {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+      width: 100%;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      background-color: #002b5c;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004080;
+    }
+
+    .footer {
+      text-align: center;
+      margin: 50px 0 20px;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background: #ffffff;
+      }
+
+      .form-section {
+        margin: 20px;
+      }
+
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <img src="images/logo.png" alt="Clear Charge Claims Logo" class="logo" />
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="start-claim.html">Start a Claim</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="logo">
+    <img src="logo.png" alt="ClearCharge Logo" width="300">
+  </div>
 
-  <section class="contact-hero">
-    <div class="container">
-      <h1>Claim Back What You're Owed</h1>
-      <p>Let us help you recover hidden broker fees from your energy contracts. Complete the form below to start your claim.</p>
-    </div>
-  </section>
+  <div class="navbar">
+    <a href="/">Home</a>
+    <a href="/start-claim">Start a Claim</a>
+    <a href="/about">About Us</a>
+    <a href="/faq">FAQ</a>
+  </div>
 
-  <section class="contact-form-section">
-    <div class="container">
-      <form action="mailto:enquiries@clearchargeclaims.com" method="POST" enctype="text/plain">
-        <div class="form-group">
-          <label for="first-name">First Name *</label>
-          <input type="text" id="first-name" name="First Name" required />
-        </div>
-        <div class="form-group">
-          <label for="last-name">Last Name *</label>
-          <input type="text" id="last-name" name="Last Name" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address *</label>
-          <input type="email" id="email" name="Email" required />
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number *</label>
-          <input type="tel" id="phone" name="Phone" required />
-        </div>
-        <div class="form-group">
-          <label for="message">Additional Information</label>
-          <textarea id="message" name="Message" rows="5"></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Submit Claim</button>
-      </form>
-    </div>
-  </section>
+  <div class="form-section">
+    <h2>Claim Back What You're Owed</h2>
+    <p>Let us help you recover hidden broker fees from your energy contracts. Complete the form below to start your claim.</p>
+    
+    <form name="claim" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="claim">
+      <label>First Name *</label>
+      <input type="text" name="first-name" required>
+      
+      <label>Last Name *</label>
+      <input type="text" name="last-name" required>
+      
+      <label>Email Address *</label>
+      <input type="email" name="email" required>
+      
+      <label>Phone Number *</label>
+      <input type="text" name="phone" required>
+      
+      <label>Additional Information</label>
+      <textarea name="message"></textarea>
+      
+      <button type="submit">Submit Claim</button>
+    </form>
+  </div>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Clear Charge Claims Ltd. All rights reserved.</p>
-    </div>
-  </footer>
+  <div class="footer">
+    © 2025 Clear Charge Claims Ltd. All rights reserved.
+  </div>
 </body>
 </html>
